@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  flex-direction: column;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+header {
+  color: #c6c5c3;
+}
+header.medium-movies {
+  color: #0f88d3;
+}
+header.medium-series {
+  color: #0e704e;
+}
+header > h2 {
+  font-size: 1.4em;
+}
+header > h2.error {
+  color: #cf0e15;
+}
+section {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+}
+section > media-item {
+  margin: 5px;
+}
+footer {
+  text-align: right;
+}
+footer .icon {
+  width: 64px;
+  height: 64px;
+  margin: 10px;
+}

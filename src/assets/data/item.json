@@ -1,0 +1,91 @@
+[{
+    "id": 1,
+    "name": "Firebug",
+    "medium": "Series",
+    "category": "Science Fiction",
+    "year": 2010,
+    "watchedOn": "1294166565384",
+    "isFavorite": false
+  },
+  {
+    "id": 2,
+    "name": "The Small Tall",
+    "medium": "Movies",
+    "category": "Comedy",
+    "year": 2015,
+    "watchedOn": "1594166565384",
+    "isFavorite": true
+  },
+  {
+    "id": 3,
+    "name": "Godfather",
+    "medium": "Series",
+    "category": "Crime",
+    "year": 1972,
+    "watchedOn": "1294166565384",
+    "isFavorite": false
+  },
+  {
+    "id": 4,
+    "name": "The Matrix",
+    "medium": "Movies",
+    "category": "Action",
+    "year": 1999,
+    "watchedOn": "1594166565384",
+    "isFavorite": true
+  },
+  {
+    "id": 5,
+    "name": "12 Angry",
+    "medium": "Movies",
+    "category": "Drama",
+    "year": 2004,
+    "watchedOn": "1294166565384",
+    "isFavorite": true
+
+  },
+  {
+    "id": 6,
+    "name": "The Notebook",
+    "medium": "Series",
+    "category": "Romance",
+    "year": 2004,
+    "watchedOn": null,
+    "isFavorite": false
+  },
+  {
+    "id": 7,
+    "name": "the hunger games",
+    "medium": "movies",
+    "category": "adventure",
+    "year": 2012,
+    "watchedOn": null,
+    "isFavorite": true
+  },
+  {
+    "id": 8,
+    "name": "The Revenant",
+    "medium": "movies",
+    "category": "adventure",
+    "year": 2015,
+    "watchedOn": null,
+    "isFavorite": true
+  },
+  {
+    "id": 9,
+    "name": "The Martian",
+    "medium": "movies",
+    "category": "adventure",
+    "year": 2015,
+    "watchedOn": null,
+    "isFavorite": false
+  },
+  {
+    "id": 10,
+    "name": "the hobbit",
+    "medium": "movies",
+    "category": "adventure",
+    "year": 2015,
+    "watchedOn": null,
+    "isFavorite": true
+  }]
