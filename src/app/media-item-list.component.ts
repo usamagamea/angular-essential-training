@@ -1,6 +1,7 @@
 import { MediaItemService } from "./media-item.service";
 import { Component, OnInit } from "@angular/core";
 import { MediaItem } from "./media-item";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "mw-media-item-list",
@@ -8,21 +9,31 @@ import { MediaItem } from "./media-item";
   styleUrls: ["./media-item-list.component.css"],
 })
 export class MediaItemListComponent implements OnInit {
-  medium='';
+  medium = "";
   mediaItems: MediaItem[];
 
-  constructor(private mediaItemService: MediaItemService) {}
+  constructor(
+    private mediaItemService: MediaItemService,
+    private activatedRoute: ActivatedRoute
+  ) {}
   ngOnInit(): void {
     // this.mediaItemService.get().subscribe((mediaItems) => {
     //   this.mediaItems = mediaItems;
     // });
-    this.getMediaItems(this.medium);
+
+    this.activatedRoute.paramMap.subscribe((paramMap) => {
+      // let medium = params["medium"];
+      let medium = paramMap.get("medium");
+      if (medium.toLowerCase() === "all") medium = "";
+      this.getMediaItems(medium);
+    });
+    // this.getMediaItems(this.medium);
   }
   onDeleteItem(mediaItem: MediaItem) {
     // this.delete.emit( this.mediaItemService.delete(mediaItem));
     this.mediaItemService.delete(mediaItem).subscribe(() => {
       this.getMediaItems(this.medium);
-    });   
+    });
   }
   getMediaItems(medium: string) {
     this.medium = medium;
@@ -30,6 +41,4 @@ export class MediaItemListComponent implements OnInit {
       this.mediaItems = mediaItems;
     });
   }
-
-
 }

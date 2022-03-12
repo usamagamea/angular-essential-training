@@ -10,9 +10,11 @@ import { MediaItemFormComponent } from "./media-item-form.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { lookupLists, lookupListToken } from "./providers";
 import { HttpClientModule, HttpXhrBackend } from "@angular/common/http";
+import { Routing } from "./app.routing";
+
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule ,  Routing],
   declarations: [
     AppComponent,
     MediaItemComponent,
@@ -20,6 +22,7 @@ import { HttpClientModule, HttpXhrBackend } from "@angular/common/http";
     MediaItemFormComponent,
     FavoriteDirective,
     CategoryListPipe,
+  
   ],
   bootstrap: [AppComponent],
   providers: [
