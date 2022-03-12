@@ -1,9 +1,11 @@
 import { MediaItemListComponent } from "./media-item-list.component";
-import { MediaItemFormComponent } from "./media-item-form.component";
 import { Routes, RouterModule } from "@angular/router";
 
 const appRouting: Routes = [
-  { path: "add", component: MediaItemFormComponent },
+  {
+    path: "add",
+    loadChildren: () => import('./new-item/new-item.module').then(lazy=>lazy.NewItemModule)
+  },
   { path: ":medium", component: MediaItemListComponent },
   { path: "", pathMatch: "full", redirectTo: "/all" },
 ];

@@ -1,4 +1,4 @@
-import { MediaItemService } from "./media-item.service";
+import { MediaItemService } from "../media-item.service";
 import { Component, OnInit, Inject } from "@angular/core";
 
 import {
@@ -7,8 +7,8 @@ import {
   Validators,
   FormBuilder,
 } from "@angular/forms";
-import { MediaItem } from "./media-item";
-import { lookupListToken } from "./providers";
+import { MediaItem } from "../media-item";
+import { lookupListToken } from "../providers";
 import { Router } from "@angular/router";
 
 // import { CustomValidators } from "./custom-validators.validators";
