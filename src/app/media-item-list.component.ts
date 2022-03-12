@@ -26,6 +26,7 @@ export class MediaItemListComponent implements OnInit {
       let medium = paramMap.get("medium");
       if (medium.toLowerCase() === "all") medium = "";
       this.getMediaItems(medium);
+      console.log(medium);
     });
     // this.getMediaItems(this.medium);
   }
@@ -37,8 +38,16 @@ export class MediaItemListComponent implements OnInit {
   }
   getMediaItems(medium: string) {
     this.medium = medium;
+    this.mediaItems = [];
+
     this.mediaItemService.get(medium).subscribe((mediaItems) => {
-      this.mediaItems = mediaItems;
+      if (medium === "all" || medium == "") {
+        this.mediaItems = mediaItems;
+      } else {
+        this.mediaItems = mediaItems.filter((mediaItem) => {
+          return mediaItem.medium === medium;
+        });
+      }
     });
   }
 }

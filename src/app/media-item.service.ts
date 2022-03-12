@@ -63,7 +63,9 @@ export class MediaItemService {
     };
     return this.http.get<MediaItemResponse>("media").pipe(
       map((Response, getOptions) => {
+        console.log(Response);
         return Response.mediaItems;
+       
       }),
       catchError(this.handleError)
     );
