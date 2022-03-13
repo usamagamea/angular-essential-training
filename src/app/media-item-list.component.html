@@ -1,20 +1,14 @@
-<!-- <nav>
-  <a (click)="getMediaItems('')">
-    <img src="../assets/04.png" class="icon">
-  </a>
-  <a (click="getMediaItems('Movies')" )>
-    <img src="../assets/03.png" class="icon">
-  </a>
-  <a (click)="getMediaItems('Series')">
-    <img src="../assets/02.png" class="icon">
-  </a>
-</nav> -->
-
-
-
-<header [ngClass]="{'medium-movies' : medium === 'Movies' , 'medium-series': medium === 'Series' }" >
+<header [ngClass]="{'medium-movies' : medium === 'Movies' , 'medium-series': medium === 'Series' }">
   <h2>{{medium}}</h2>
+
+
   <div>{{mediaItems|categoryList}}</div>
+
+  <mw-category-list [categories]="mediaItems |categoryList">
+    <!-- .find('category') -->
+    <!-- {{mediaItems|categoryList}} -->
+
+  </mw-category-list>
 </header>
 <section>
   <mw-media-item *ngFor="let item of mediaItems" [mediaItemToWatch]="item"
@@ -27,3 +21,21 @@
     <img src="../assets/01.png" class="icon">
   </a>
 </footer>
+
+
+
+
+
+
+
+<!-- <nav>
+  <a (click)="getMediaItems('')">
+    <img src="../assets/04.png" class="icon">
+  </a>
+  <a (click="getMediaItems('Movies')" )>
+    <img src="../assets/03.png" class="icon">
+  </a>
+  <a (click)="getMediaItems('Series')">
+    <img src="../assets/02.png" class="icon">
+  </a>
+</nav> -->

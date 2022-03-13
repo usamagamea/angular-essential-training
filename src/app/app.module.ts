@@ -11,7 +11,7 @@ import { FormsModule} from "@angular/forms";
 import { lookupLists, lookupListToken } from "./providers";
 import { HttpClientModule, HttpXhrBackend } from "@angular/common/http";
 import { Routing } from "./app.routing";
-
+import { CategoryLisComponent } from "./category-list.component";
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import { Routing } from "./app.routing";
     AppComponent,
     MediaItemComponent,
     MediaItemListComponent,
+    CategoryLisComponent,
     FavoriteDirective,
     CategoryListPipe,
   

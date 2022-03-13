@@ -1,5 +1,5 @@
 import { MediaItemService } from "./media-item.service";
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { MediaItem } from "./media-item";
 import { ActivatedRoute } from "@angular/router";
 
@@ -9,6 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./media-item-list.component.css"],
 })
 export class MediaItemListComponent implements OnInit {
+ 
   medium = "";
   mediaItems: MediaItem[];
 
