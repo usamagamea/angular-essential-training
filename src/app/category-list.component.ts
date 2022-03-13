@@ -26,10 +26,9 @@ import { Component, Input } from "@angular/core";
         margin-right: 4px;
         margin-bottom: 4px;
       }
-     
     `,
   ],
 })
-export class CategoryLisComponent {
-  @Input() categories: string[];
+export class CategoryLisComponent  {
+  @Input() categories: MediaItem[];
 }

@@ -1,3 +1,4 @@
+
 import { newItemRouting } from './new-item.routing';
 import { MediaItemFormComponent } from './media-item-form.component';
 import { NgModule } from '@angular/core';
@@ -6,9 +7,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
-    MediaItemFormComponent
+    MediaItemFormComponent,
+   
   ],
   imports: [
     CommonModule,
